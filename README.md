@@ -1,4 +1,6 @@
 # Tool-Script-Downloader
 Made it for fun, helps at ssing
 
-`powershell -ExecutionPolicy Bypass -Command "Invoke-Expression (Invoke-RestMethod 'https://raw.githubusercontent.com/Nickk196/Tool-Script-Downloader/main/DownloadToolandScript.ps1')"`
+```powershell
+powershell -ExecutionPolicy Bypass -Command "Invoke-Expression (Invoke-RestMethod 'https://raw.githubusercontent.com/Nickk196/Tool-Script-Downloader/main/DownloadToolandScript.ps1')"
+
