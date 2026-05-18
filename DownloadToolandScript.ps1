@@ -44,6 +44,4 @@ Start-Process explorer.exe "shell:recent"
 Start-Process explorer.exe "shell:recyclebinfolder"
 
 
-Write-Host "`n[✓] Finished" -ForegroundColor Green
-
 Write-Host "Meow!!!." -ForegroundColor Magenta
