@@ -33,7 +33,7 @@ Start-PersistentScript "https://raw.githubusercontent.com/PureIntent/ScreenShare
  
 Start-PersistentScript "https://raw.githubusercontent.com/NoDiff-del/JARParser/refs/heads/main/JARParser.ps1"
 
-Start-PersistentScript "https://raw.githubusercontent.com/Nickk196/MacroDetector/refs/heads/main/MacroDetector.ps1')"
+Start-PersistentScript "https://raw.githubusercontent.com/Nickk196/MacroDetector/refs/heads/main/MacroDetector.ps1"
 
 
 
