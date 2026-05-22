@@ -1,52 +1,23 @@
-#Requires -RunAsAdministrator
-
 function Start-PersistentScript {
-    param (
-        [string]$Url
-    )
-
-    $command = "powershell -NoExit -ExecutionPolicy Bypass -Command `"try { iex (irm '$Url') } catch { Write-Host `$_ -ForegroundColor Red }; Write-Host ''; Write-Host 'Keeping window open.' -ForegroundColor Cyan; while (`$true) { Start-Sleep 3600 }`""
-
-    Start-Process cmd.exe -Verb RunAs -ArgumentList "/k $command"
+    param([string]$Url)
+    $arg = "-NoExit -ExecutionPolicy Bypass -Command `"iex (irm '$Url'); Write-Host ''; Write-Host 'Keeping window open.' -ForegroundColor Cyan; while (`$true) { Start-Sleep 3600 }`""
+    Start-Process powershell.exe -ArgumentList $arg
 }
 
-# 
-# Launch scripts
-#
-
-
 Start-PersistentScript "https://raw.githubusercontent.com/praiselily/lilith-ps/refs/heads/main/Signed-Scheduled-Tasks"
-
 Start-PersistentScript "https://raw.githubusercontent.com/praiselily/lilith-ps/refs/heads/main/DoomsdayFinder.ps1"
-
 Start-PersistentScript "https://raw.githubusercontent.com/Enr1c0o/Powershell-Scripts/refs/heads/main/Alt-Detector.ps1"
-
 Start-PersistentScript "https://raw.githubusercontent.com/praiselily/lilith-ps/refs/heads/main/ShellSearch.ps1"
-
 Start-PersistentScript "https://raw.githubusercontent.com/praiselily/lilith-ps/refs/heads/main/CommonDirectories.ps1"
-
 Start-PersistentScript "https://raw.githubusercontent.com/Ferman9/DIFR-tools/main/dillfindernew.ps1"
-
-Start-PersistentScript "https://raw.githubusercontent.com/MeowTonynoh/MeowModAnalyzer/main/MeowModAnalyzer.ps1" 
-
+Start-PersistentScript "https://raw.githubusercontent.com/MeowTonynoh/MeowModAnalyzer/main/MeowModAnalyzer.ps1"
 Start-PersistentScript "https://raw.githubusercontent.com/PureIntent/ScreenShare/main/RedLotusBam.ps1"
- 
 Start-PersistentScript "https://raw.githubusercontent.com/NoDiff-del/JARParser/refs/heads/main/JARParser.ps1"
-
-irm "https://raw.githubusercontent.com/Nickk196/MacroDetector/refs/heads/main/MacroDetector.ps1" | iex
-
+Start-PersistentScript "https://raw.githubusercontent.com/Nickk196/MacroDetector/refs/heads/main/MacroDetector.ps1"
 Start-PersistentScript "https://raw.githubusercontent.com/cheesecatlol/DQRKIS-FUCKER/refs/heads/main/DqrkisFucker.ps1"
-
-
-
-
-# 
-# Open folders
-# 
 
 Start-Process explorer.exe $env:TEMP
 Start-Process explorer.exe "shell:recent"
 Start-Process explorer.exe "shell:recyclebinfolder"
 
-
-Write-Host "Meow!!!." -ForegroundColor Magenta
+Write-Host "Meow!!!" -ForegroundColor Magenta
