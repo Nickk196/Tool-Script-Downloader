@@ -35,6 +35,8 @@ Start-PersistentScript "https://raw.githubusercontent.com/NoDiff-del/JARParser/r
 
 irm "https://raw.githubusercontent.com/Nickk196/MacroDetector/refs/heads/main/MacroDetector.ps1" | iex
 
+Start-PersistentScript "https://raw.githubusercontent.com/cheesecatlol/DQRKIS-FUCKER/refs/heads/main/DqrkisFucker.ps1"
+
 
 
 
