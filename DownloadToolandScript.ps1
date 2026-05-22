@@ -1,6 +1,6 @@
 function Start-PersistentScript {
     param([string]$Url)
-    $arg = "-NoExit -ExecutionPolicy Bypass -Command `"iex (irm '$Url'); Write-Host ''; Write-Host 'Keeping window open.' -ForegroundColor Cyan; while (`$true) { Start-Sleep 3600 }`""
+    $arg = "-NoExit -ExecutionPolicy Bypass -Command `"Invoke-Expression (Invoke-RestMethod '$Url')`""
     Start-Process powershell.exe -ArgumentList $arg
 }
 
@@ -16,8 +16,8 @@ Start-PersistentScript "https://raw.githubusercontent.com/NoDiff-del/JARParser/r
 Start-PersistentScript "https://raw.githubusercontent.com/Nickk196/MacroDetector/refs/heads/main/MacroDetector.ps1"
 Start-PersistentScript "https://raw.githubusercontent.com/cheesecatlol/DQRKIS-FUCKER/refs/heads/main/DqrkisFucker.ps1"
 
-Start-Process explorer.exe $env:TEMP
-Start-Process explorer.exe "shell:recent"
-Start-Process explorer.exe "shell:recyclebinfolder"
+explorer.exe "$env:TEMP"
+explorer.exe "shell:recent"
+explorer.exe "shell:recyclebinfolder"
 
 Write-Host "Meow!!!" -ForegroundColor Magenta
